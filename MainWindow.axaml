@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TaskApp.MainWindow"
+        Title="Ukolnicek">
+
+        <ScrollViewer>
+            <StackPanel Margin="30" Spacing="15" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Ukolnicek" FontSize="28" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Moje ukoly" HorizontalAlignment="Center"></TextBlock>
+                <TextBox KeyDown="TaskInput_KeyDown" Name="TaskInput" Width="300" PlaceholderText="Napis novy ukol" HorizontalAlignment="Center"></TextBox>
+                <NumericUpDown Name="PriorityInput" Minimum="1" Maximum="5" Value="3" Width="150" HorizontalAlignment="Center"></NumericUpDown>
+                <Button Content="Pridat" Width="100" Name="AddButton" HorizontalAlignment="Center" Click="AddButton_Click"></Button>
+                <ComboBox Name="FilterBox" Width="160" SelectedIndex="0" SelectionChanged="FilterBox_SelectionChanged" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="Vsechny"></ComboBoxItem>
+                    <ComboBoxItem Content="Nehotove"></ComboBoxItem>
+                    <ComboBoxItem Content="Hotove"></ComboBoxItem>
+                </ComboBox>
+                <ListBox Name="TaskList" Width="300" Height="220"></ListBox>
+                <TextBlock Name="StatusText" Text="Celkem: 0, hotovo: 0" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Name="EmptyText" Text="Zatim nemas zadne ukoly" HorizontalAlignment="Center"></TextBlock>
+                <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+                    <Button Content="Smazat" Name="DeleteButton" Width="130" HorizontalAlignment="Center" Click="DeleteButton_Click"></Button>
+                    <Button Content="Hotovo" Name="UpdateButton" Width="130" HorizontalAlignment="Center" Click="UpdateButton_Click"></Button>
+                    <Button Content="Smazat Hotove" Name="DeleteAllIsDoneButton" Width="130" HorizontalAlignment="Center" Click="DeleteAllIsDoneButton_Click"></Button>
+                    <Button Content="Smazat Vse" Name="DeleteAllButton" Width="130" HorizontalAlignment="Center" Click="DeleteAllButton_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+</Window>

@@ -1,0 +1,52 @@
+# Build output
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Logs
+*.log
+
+# Test results / coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Publish output
+publish/
+*.pubxml.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+.env
+*.env
+appsettings.Development.json
